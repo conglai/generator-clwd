@@ -18,7 +18,7 @@ module.exports = yeoman.generators.Base.extend({
     },{
       type: 'input',
       name: 'desc',
-      message: '项目描述',,
+      message: '项目描述',
       default: this.appname
     }];
 
@@ -40,17 +40,9 @@ module.exports = yeoman.generators.Base.extend({
 
     projectfiles: function () {
       this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
+        this.templatePath('files/**/*'),
+        this.destinationPath('./')
       );
     }
   },
-
-  install: function () {
-    this.installDependencies();
-  }
 });

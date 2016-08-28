@@ -7,6 +7,8 @@ const minimist = require('minimist');
 const argv = minimist(process.argv.slice(2));
 const isOnline = argv._[0] === 'online';
 
+const srcFiles = ['pages/**/*.(js|ejs|less)'];
+
 //清空build目录
 const rimraf = require('rimraf');
 gulp.task('clean', cb => {
