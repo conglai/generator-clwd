@@ -35,6 +35,11 @@ module.exports = yeoman.generators.Base.extend({
         this.destinationPath('package.json'),
         this._config
       );
+      this.fs.copyTpl(
+        this.templatePath('_readme'),
+        this.destinationPath('README.md'),
+        this._config
+      );
     },
 
     projectfiles: function () {
