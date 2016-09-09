@@ -13,18 +13,17 @@ module.exports = yeoman.generators.Base.extend({
     let prompts = [{
       type: 'input',
       name: 'name',
-      message: '项目名',
+      message: '组件名',
       default: this.appname
     },{
       type: 'input',
       name: 'desc',
-      message: '项目描述',
+      message: '组件描述',
       default: this.appname
     }];
 
     this.prompt(prompts, config => {
       this._config = config;
-      this.log(config);
       done();
     });
   },
