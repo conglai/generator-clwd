@@ -1,46 +1,33 @@
-# generator-clwd [![Build Status](https://secure.travis-ci.org/ykan/generator-clwd.png?branch=master)](https://travis-ci.org/ykan/generator-clwd)
+# 从来前端[Yeoman](http://yeoman.io)生成器 [![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url]
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
 
-> [Yeoman](http://yeoman.io) generator
+[npm-url]: https://npmjs.org/package/generator-clwd
+[npm-version-image]: http://img.shields.io/npm/v/generator-clwd.svg?style=flat
+[npm-downloads-image]: http://img.shields.io/npm/dm/generator-clwd.svg?style=flat
 
-
-## Getting Started
-
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
-
-```bash
-npm install -g yo
+## 安装
+```
+~ npm i yeoman -g
+~ npm i generator-clwd -g
 ```
 
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-clwd from npm, run:
-
-```bash
-npm install -g generator-clwd
+## 使用
+```
+~ yo clwd:rc # React 组件
+~ yo clwd
 ```
 
-Finally, initiate the generator:
+## 功能说明
 
-```bash
-yo clwd
-```
+### rc生成器
+React Component，开发环境包括:
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
+* gulp
+* webpack
+* babel
+* browser-sync
+* eslint
 
 ## License
 
