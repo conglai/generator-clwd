@@ -1,2 +1,20 @@
 # <%= name %>
-> <%= desc %>
+
+# 从来React组件：<%= name %> [![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![MIT License][license-image]][license-url]
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
+
+[npm-url]: https://npmjs.org/package/<%= name %>
+[npm-version-image]: http://img.shields.io/npm/v/<%= name %>.svg?style=flat
+[npm-downloads-image]: http://img.shields.io/npm/dm/<%= name %>.svg?style=flat
+
+## 安装
+```
+npm i <%= name %>
+```
+
+## 最简Demo
+```
+
+
+```
