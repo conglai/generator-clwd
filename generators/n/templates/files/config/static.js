@@ -6,4 +6,5 @@ module.exports = {
   rootPath: path.normalize(__dirname + '/..'),
   commonMiddlewares: ['logger'],
   defaultRouter: 'error',
+  env: process.env.NODE_ENV || 'dev'
 };
