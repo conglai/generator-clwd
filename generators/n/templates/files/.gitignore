@@ -1,0 +1,8 @@
+node_modules
+build
+lib
+upload
+*.log
+
+.idea/
+.DS_Store

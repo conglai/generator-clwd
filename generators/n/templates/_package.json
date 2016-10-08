@@ -1,0 +1,19 @@
+{
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "description": "<%= desc %>",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js"
+  },
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^1.0.0",
+    "co": "^4.6.0",
+    "ua-parser-js": "^0.7.9"
+  },
+  "devDependencies": {
+    "should": "^8.2.2",
+    "mocha": "^3.0.2"
+  }
+}
