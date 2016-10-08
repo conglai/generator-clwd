@@ -7,6 +7,6 @@ module.exports = function(logger, config) {
     },
     middlewares: ['params', function*(next){
 
-    }];
+    }]
   });
 };
