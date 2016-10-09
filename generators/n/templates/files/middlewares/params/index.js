@@ -2,7 +2,8 @@
 module.exports = function(logger, config) {
   return Promise.resolve({
     middlewares: [function*(next) {
-      this.mLogger = { info: () => {} };
+      let paramSchema = this.router.params;
+      this.params = this.query;
       yield next;
     }]
   });

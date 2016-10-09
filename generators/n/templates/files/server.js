@@ -56,7 +56,7 @@ co(function*(){
       }
     });
 
-    for (let i = 0, l = middlewares.length; i < l; i++) {
+    for (let i = middlewares.length - 1; i >= 0; i--) {
       next = middlewares[i].call(this, next);
     }
     yield *next;
