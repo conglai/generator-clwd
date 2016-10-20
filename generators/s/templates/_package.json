@@ -1,0 +1,10 @@
+{
+  "name": "<%= name %>",
+  "version": "0.1.0",
+  "description": "<%= desc %>",
+  "scripts": {
+    "test": "mocha tests/**/*.test.js"
+  },
+  "main": "index.js",
+  "license": "MIT"
+}
