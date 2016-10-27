@@ -2,9 +2,9 @@
 const path = require('path');
 module.exports = {
   version: '0.3.2',
-  port: 7111,
+  port: process.env.WEB_PORT || 7111,
   rootPath: path.normalize(__dirname + '/..'),
-  commonMiddlewares: ['logger'],
-  defaultRouter: 'error',
+  commonMiddlewares: ['stats', 'params', 'i-helper'],
+  defaultRouter: 'example',
   env: process.env.NODE_ENV || 'dev'
 };

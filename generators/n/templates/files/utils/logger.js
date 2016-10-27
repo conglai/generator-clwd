@@ -1,23 +1,17 @@
 'use strict';
 const log4js = require('log4js');
 module.exports = function(config) {
+  let env = config.get('env');
+  let appenders = [{ type: 'console', category: '[dev]' }];
   log4js.configure({
-    appenders: [
-      { type: 'console', category: '[dev]' },
-      {
-        type: 'dateFile',
-        filename: `_logs/main.log`,
-        pattern: '-yyyy-MM-dd',
-        alwaysIncludePattern: false,
-      }
-    ],
-    levels: {
-      '[dev]': 'DEBUG',
-      '[daily]': 'INFO',
-      '[online]': 'INFO',
-    },
+    appenders: [{ type: 'console' }],
     replaceConsole: true
   });
-  let logger = log4js.getLogger(`[${config.env}]`);
+  let logger = log4js.getLogger(`[${env}]`);
+  if(env === 'dev') {
+    logger.setLevel('debug');
+  } else {
+    legger.setLevel('info');
+  }
   return logger;
 };

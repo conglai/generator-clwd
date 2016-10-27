@@ -2,11 +2,11 @@
 
 module.exports = function(logger, config) {
   return Promise.resolve({
-    params: {
-
-    },
-    middlewares: ['params', function*(next){
-
+    middlewares: [function*(next){
+      this.mSucc({
+        sum: 3
+      });
+      yield next;
     }]
   });
 };
