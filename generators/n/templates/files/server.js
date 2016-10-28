@@ -25,23 +25,36 @@ const co = require('co');
 //# 应用初始化
 co(function*(){
   let deps = [logger, config];
+  //中间件
   let middlewareMap = yield loadModules({ path: `${rootPath}/middlewares`, deps: deps });
+  //接口
   let interfaces = yield loadModules({
     path: `${rootPath}/interfaces`,
     deps: deps,
     attach: {
-      commonMiddlewares: ['stats', 'session', 'i-helper'],
+      commonMiddlewares: ['stats', 'i-helper'],
       generateSession: false, // 用于是否生成cookie
     }
   });
+  //页面
+  let pages = yield loadModules({
+    path: `${rootPath}/pages`,
+    deps: deps,
+    defaultFile: 'node.main',
+    attach: {
+      commonMiddlewares: ['stats', 'pug-tool'],
+      generateSession: true, // 用于是否生成cookie
+    }
+  });
   let routerMap = {
-    i: interfaces
+    i: interfaces,
+    p: pages,
   };
 
   app.use(mainRouterFunc({
     middlewareMap: middlewareMap,
     routerMap: routerMap,
-    defaultRouter: ['i', 'error'], //设置默认路由
+    defaultRouter: config.get('defaultRouter').toJS(), //设置默认路由
     logger: logger
   }));
   app.listen(port, () => {

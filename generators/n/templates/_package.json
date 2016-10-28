@@ -14,13 +14,14 @@
     "immutable": "^3.8.1",
     "koa": "^1.0.0",
     "log4js": "^0.6.38",
+    "pug": "^2.0.0-beta6",
     "redis": "^2.6.2",
     "spark-md5": "^2.0.2",
     "ua-parser-js": "^0.7.9"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.0",
     "eslint": "^3.7.1",
-    "gulp": "^3.9.1",
     "mocha": "^3.0.2",
     "should": "^8.2.2",
     "should-sinon": "0.0.5",

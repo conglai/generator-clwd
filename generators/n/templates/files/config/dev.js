@@ -8,6 +8,14 @@ let config = Object.assign(staticConfig, {
     port: 6379,
     pre: 'base.node.app.'
   },
+  pug: {
+    basedir: `${staticConfig.rootPath}/templates`,
+    debug: true,
+    compileDebug: true
+  },
+  assets: {
+    pageAssets: '//localhost:12126/'
+  }
 });
 
 module.exports = Immutable.fromJS(config);

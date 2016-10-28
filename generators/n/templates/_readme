@@ -1,7 +1,13 @@
-# <%= name %>
+# <%= desc %>
 
-## 最简Demo
-```
-
-
+```js
+- _logs       //日志存储目录
+- .vscode
+- config      //应用配置
+- interfaces  //接口目录
+- middlewares //中间件目录
+- pages       //页面目录
+- templates   //模板目录
+- tests       //测试目录
+- utils       //辅助核心函数
 ```

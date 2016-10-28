@@ -36,6 +36,7 @@ module.exports = function(args){
     }
     this.gRouter = router;
     this.gRouterKeys = [ mapKey, routerName ];
+    this.gUrlParams = urlParams;
 
     yield *next;
   };
